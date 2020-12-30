@@ -1,0 +1,20 @@
+{
+  "name": "Intl::Format::List",
+  "description": "A module for formatting lists in a localized manner",
+  "version": "0.1",
+  "perl": "6.*",
+  "raku": "6.*",
+  "authors": [
+    "Matthew Stephen Stuckwisch"
+  ],
+  "auth": "github:alabamenhu",
+  "depends": ["Intl::CLDR", "Intl::UserLanguage"],
+  "build-depends": [],
+  "test-depends": [],
+  "provides": {
+    "Intl::Format::List": "lib/Intl/Format/List.pm6"
+  },
+  "resources": [],
+  "license": "Artistic-2.0",
+  "source-url": "Write me!"
+}
