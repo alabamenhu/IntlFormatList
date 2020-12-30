@@ -1,7 +1,7 @@
 {
   "name": "Intl::Format::List",
   "description": "A module for formatting lists in a localized manner",
-  "version": "0.1",
+  "version": "0.5.0",
   "perl": "6.*",
   "raku": "6.*",
   "authors": [

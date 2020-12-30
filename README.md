@@ -47,7 +47,7 @@ All items passed in are stringified.
 
 ## Version history
 
-  * **v0.5**  
+  * **v0.5.0**  
     * First release as its own module
     * Much cleaner / more maintainable codebase
   * **v0.1** – **v0.4.3**
