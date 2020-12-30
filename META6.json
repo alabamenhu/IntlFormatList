@@ -8,7 +8,7 @@
     "Matthew Stephen Stuckwisch"
   ],
   "auth": "github:alabamenhu",
-  "depends": ["Intl::CLDR", "Intl::UserLanguage"],
+  "depends": ["Intl::CLDR:ver<0.5+>", "Intl::UserLanguage"],
   "build-depends": [],
   "test-depends": [],
   "provides": {
