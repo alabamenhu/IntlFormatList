@@ -1,0 +1,22 @@
+use Intl::Format::List;
+use Test;
+
+my @list-a = <apple orange banana>;
+
+is format-list(@list-a, :language<en>             ), "apple, orange, and banana";
+is format-list(@list-a, :language<en>, :type<or>  ), "apple, orange, or banana";
+is format-list(@list-a, :language<en>, :type<unit>), "apple, orange, banana";
+
+my @list-b = <mazana naranxa plátanu>;
+
+is format-list(@list-b, :language<ast>  :length<narrow>,            ), "mazana, naranxa y plátanu";
+is format-list(@list-b, :language<ast>, :length<narrow>, :type<or>  ), "mazana, naranxa o plátanu";
+is format-list(@list-b, :language<ast>, :length<narrow>, :type<unit>), "mazana, naranxa y plátanu";
+
+my @list-c = <사과 오렌지 바나나>;
+
+is format-list(@list-c, :language<ko>  :length<short>,            ), "사과, 오렌지 및 바나나";
+is format-list(@list-c, :language<ko>, :length<short>, :type<or>  ), "사과, 오렌지 또는 바나나";
+is format-list(@list-c, :language<ko>, :length<short>, :type<unit>), "사과 오렌지 바나나";
+
+done-testing;
