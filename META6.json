@@ -1,12 +1,12 @@
 {
-  "name": "Intl-Format-List",
+  "name": "Intl::Format::List",
   "description": "A module for formatting lists in a localized manner",
   "version": "0.6.0+",
   "perl": "6.*",
   "authors": [
     "Matthew Stephen Stuckwisch"
   ],
-  "auth": "github:alabamenhu",
+  "auth": "zef:guifa",
   "depends": [
     "Intl::CLDR:ver<0.7.3+>:auth<zef:guifa>",
     "User::Language:ver<0.5.0+>:auth<zef:guifa>"
@@ -14,7 +14,7 @@
   "build-depends": [],
   "test-depends": [],
   "provides": {
-    "Intl::Format::List": "lib/Intl/Format/List.pm6"
+    "Intl::Format::List": "lib/Intl/Format/List.rakumod"
   },
   "resources": [],
   "license": "Artistic-2.0",
