@@ -1,0 +1,19 @@
+use v6.d;
+use Test;
+use Intl::Format::List :rakuast;
+
+my $rakuast = so $*RAKU.compiler.name    eq 'rakudo'
+              && $*RAKU.compiler.version  ≥ v2022.12.813.g.02043.da.92;
+
+ok '&format-list-rakuast' ∈ ::.keys;
+ok '&format-list'         ∉ ::.keys;
+
+if $rakuast {
+    use experimental :rakuast;
+    ok format-list-rakuast('en', 'and', 'standard') ~~ RakuAST::PointyBlock;
+} else {
+    note 'Could not test RakuAST functionality, as the current compiler does not support it.';
+    note 'Rerun tests after upgrading to Rakudo v2022.12 or higher';
+}
+
+done-testing;

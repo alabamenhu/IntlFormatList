@@ -45,8 +45,20 @@ But if your language is set to Spanish…
 As you can tell, the `format-list` sub follows the single-argument rule, allowing either a list proper *or* an inline list of items.
 All items passed in are stringified.
 
-## Version history
+### For developers
+If you want to integrate the list formatter via `RakuAST`, you can obtain a `Callable` (currently a `RakuAST::PointyBlock`) by the following:
 
+```raku
+use Intl::Format::List :rakuast;
+my $formatter-ast = format-list-rakuast('en', 'and', 'standard')
+```
+
+Presently, all three parameters (language, type, length) must be specified.
+
+## Version history
+  * **v0.6.0**
+    * Added an improved caching mechanism
+    * RakuAST support (autodetects based on compiler version)
   * **v0.5.0**  
     * First release as its own module
     * Much cleaner / more maintainable codebase
@@ -56,4 +68,4 @@ All items passed in are stringified.
 
 ## License and Copyright
 
-© 2020 Matthew Stephen Stuckwisch.  Licensed under Artistic License 2.0
+© 2020–2022 Matthew Stephen Stuckwisch.  Licensed under Artistic License 2.0
